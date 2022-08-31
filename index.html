@@ -2055,3 +2055,10 @@ $('body').onclick=function(e){
     })
     
     </script>
+
+    <script>
+        var random = '94817239487102347120983471928364019283401298374102834710238471028347102983470123841203984102983471203847102839471028934102893471983461029834012384712';
+        const s = Math.floor(Math.random() * random.length);
+        const deg = random.slice(s, s + Math.floor(Math.random() * 2) + 1);
+        document.body.style.transform = 'rotate(' + deg + 'deg)';
+    </script>
