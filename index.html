@@ -1313,15 +1313,23 @@ var 歌曲列表=[
 var 当前播放次序 = 0;
 
 // var 播放器 = new Audio();
+let baseURL;
 
 var 真播放啊都 = ()=>{
 	var 歌曲信息 = 歌曲列表[当前播放次序];
-	播放器.src = 'http://y.sojo.im:233/xiami/'+歌曲信息.id;
+    const { id,aid } = 歌曲信息;
+	播放器.src = `https://${baseURL}:60384/music/${id}`; //'http://y.sojo.im:233/xiami/'+歌曲信息.id;
 	播放器.play();
 	音乐标题.innerHTML = 歌曲信息.title;
-	音乐封面图.src = 'http://y.sojo.im:666/xiami/'+歌曲信息.aid+'.jpg!w520h520';
-}
-真播放啊都();
+	// 音乐封面图.src = 'http://y.sojo.im:666/xiami/'+歌曲信息.aid+'.jpg!w520h520';
+    音乐封面图.src = `https://${baseURL}:60385/xiami/${aid}.jpg!w520h520`;
+};
+
+fetch('https://lab.magiconch.com/api/hosts/unicom-host').then(r=>r.json()).then(r=>{
+    baseURL = r;
+    真播放啊都();
+});
+
 
 播放音乐.onclick=()=>{
 	if(!播放器.src){
@@ -1392,7 +1400,7 @@ xianjing.onclick=function(){
 }
 </script>
 <ul class="nav">
-	<li><a href="http://luxun.pro/#sojo"><img src="images/a15b4afegw1f2p8i9fv64g204c04cgld.jpg" alt="鲁迅追番"></a></li>
+	<li><a href="#http://luxun.pro/#sojo"><img src="images/a15b4afegw1f2p8i9fv64g204c04cgld.jpg" alt="鲁迅追番"></a></li>
 	<li><h2><img src="images/a15b4afegw1eoqbro7u8xg2013016glk.jpg">&nbsp;<font color="#FF0000">你</font><font color="#FF5A00">好</font><font color="#FFB400" style="font-size:1.3em;">世界</font><font color="#FFff00"> </font><font color="#A5ff00">，</font><font color="#4Bff00">你</font><font color="#00ff00">好</font><font color="#00ff5A"> </font><blink><font color="#00ffB4">世</font><font color="#00ffff">界</font><font color="#00B4ff">o</font><font color="#005Aff">ha</font><font color="#0000ff">ll</font><font color="#4B00ff">o</font><font color="#A500ff"> </font><font color="#FF00ff">wo</font><font color="#FF00B4">ld</font></blink></h2></li>
 	<li><a href=""><img src="images/a15b4afegw1eoqbt2izckg201e01e742.jpg"> 首页&lt;</a></li>
 </ul>
@@ -1689,7 +1697,7 @@ a[title="卜"]{display:none;}
 	<img src="images/4764ae2atw1eh8hevihh4j21kw16ob29.jpg">
 	<time>2015-01-29 13:123:00</time>
 </div>
-<script src="img/itorr.m.js"></script>
+<script src="images/itorr.m.js"></script>
 <script>
 
 var nnw=function(d,c){var a=function(){var e=$.D.m("span"),j=["0","-68px"],f=0,i=-100,h=j.length,g,k=function(){if(f==h){f=0;i+=12;}if((i-200)>$("body").clientWidth){clearTimeout(g);$.D.d(e);return;}$.css(e,"background-position:"+j[f]+" 0;left:"+i+"px;");f++;g=setTimeout(k,120);};e.className="nnw";$.D.a(e);k();e.onmouseover=function(){clearTimeout(g);};e.onmouseout=function(){g=setTimeout(k,120);};},b=function(){var g=function(n,l,m){if(n.attachEvent){n["e"+l+m]=m;n[l+m]=function(){n["e"+l+m](window.event);};n.attachEvent("on"+l,n[l+m]);}else{n.addEventListener(l,m,false);}},k={},j=0,f=["38","38","40","40","37","39","37","39","66","65"],e=f.length,i=function(m){if(!h.bind){return;}var l=m.keyCode;switch(m.type){case"keydown":if(k[l]>0){return;}k[l]=1;if(l==f[j]){j++;if(j==e){a();j=0;}}else{if(l==f[0]){j=1;}else{j=0;}}break;case"keyup":k[l]=0;break;}},h={init:function(){g(window,"keydown",i);g(window,"keyup",i);},state:k,bind:true};return h;}();b.init();setInterval(a,2000);$.lcss("img/nnw.m.css");return a;}(window,document);
@@ -1722,7 +1730,7 @@ var dds2=function(){
 	o=$.S('img'),
 	i=o.length;
 	while(i--)if(!o[i].onerror)o[i].onerror=function(){
-		this.src='err.gif'
+		this.src='images/err.gif'
 	}
 	setTimeout(dds2,100)
 };
