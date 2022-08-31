@@ -79,6 +79,8 @@ marquee a{color:chartreuse;}
 	font-size:1.4em;
 	font-weight:800;
 	border:2px dashed yellow;
+    animation: rr 10s infinite;
+    cursor: move;
 }
 #下一首{
 	background:blue;
@@ -92,6 +94,16 @@ marquee a{color:chartreuse;}
 #播放器{
 	height:40px;
 }
+
+
+@keyframes rr{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+ }
 </style>
 
 
@@ -1383,7 +1395,9 @@ fetch('https://lab.magiconch.com/api/hosts/unicom-host').then(r=>r.json()).then(
 </marquee>
 
 
-快来关注我！！-----v<iframe src="https://widget.weibo.com/relationship/followbutton.php?btn=red&amp;style=4&amp;uid=5111733553&amp;width=100%&amp;height=64&amp;language=zh_tw" width="100%" height="64" frameborder="0" scrolling="no" marginheight="0"></iframe>
+快来关注我！！-----v
+<!-- <iframe src="https://widget.weibo.com/relationship/followbutton.php?btn=red&amp;style=4&amp;uid=5111733553&amp;width=100%&amp;height=64&amp;language=zh_tw" width="100%" height="64" frameborder="0" scrolling="no" marginheight="0"></iframe> -->
+<iframe src="https://widget.weibo.com/relationship/followbutton.php?btn=red&amp;style=4&amp;uid=1197780522&amp;width=100%&amp;height=64&amp;language=zh_tw" width="100%" height="64" frameborder="0" scrolling="no" marginheight="0"></iframe>
 ^----快来关注我！！！
 
 <!-- <a href="https://itunes.apple.com/cn/app/zheng-xu/id1157594484?mt=8" target="_blank" style="position:absolute;top:540px;right:320px;width:240px;"><img src="images/a15b4afegw1f87dx4i0yeg206u02lagr.jpg" style="width:180px;height:60px;"><big>魔蛤</big>-表情包 <small>开发商：EyreFree</small>
@@ -1408,6 +1422,16 @@ xianjing.onclick=function(){
 	<li><a href="#http://luxun.pro/#sojo"><img src="images/a15b4afegw1f2p8i9fv64g204c04cgld.jpg" alt="鲁迅追番"></a></li>
 	<li><h2><img src="images/a15b4afegw1eoqbro7u8xg2013016glk.jpg">&nbsp;<font color="#FF0000">你</font><font color="#FF5A00">好</font><font color="#FFB400" style="font-size:1.3em;">世界</font><font color="#FFff00"> </font><font color="#A5ff00">，</font><font color="#4Bff00">你</font><font color="#00ff00">好</font><font color="#00ff5A"> </font><blink><font color="#00ffB4">世</font><font color="#00ffff">界</font><font color="#00B4ff">o</font><font color="#005Aff">ha</font><font color="#0000ff">ll</font><font color="#4B00ff">o</font><font color="#A500ff"> </font><font color="#FF00ff">wo</font><font color="#FF00B4">ld</font></blink></h2></li>
 	<li><a href=""><img src="images/a15b4afegw1eoqbt2izckg201e01e742.jpg"> 首页&lt;</a></li>
+
+    <li>
+        <a href="https://github.com/itorr/sojo">
+            <big>
+                🐙🐱
+                <b>开源色区</b>
+                ：、、GayHub.Com/i7o2r/S0jo
+            </big>
+        </a>
+    </li>
 </ul>
 
 
