@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://www.baidu.com/?cm=ZhewAnZaNNiyEbADeXiAsHou -->
+<meta charset="UTF-8">
+<style>
+html,input,button{font-family:"Comic Sans","Comic Sans MS","Chalkboard","ChalkboardSE-Regular","Marker Felt","Purisa","URW Chancery L",cursive,楷体,sans-serif;}
+
+html{background:red;}
+body{background:url(img/bg.gif) top repeat-x;}
+.box-san{background:url(images/a15b4afegw1eoqbmz26q0g20go0dczl4.jpg);color:chartreuse;}
+img{border:3px solid blue;background:#DDD;}
+a:visited{}
+a img,
+a button{border-color:purple;}
+h1{font-size:4em;color:white;}
+h2{font-size:4em;}
+h3{color:#FFF;margin:0;font-size:3em;}
+marquee{background:black;color:chartreuse;}
+marquee a{color:chartreuse;}
+.nnw{width:68px;height:40px;background:url(img/nnw.png) no-repeat;position:absolute;position:fixed;bottom:-4px;left:-200px;margin-right:-1000px;z-index:10;}
+
+
+#hitokoto{position:absolute;position:fixed;right:0;bottom:0;padding:.3em 1em;border:3px solid #00f6ff;background:#FF0;color:#20F;}
+
+
+.post{margin:2em;}
+.post h4{font-size:2em;color:#FD0;}
+
+.search{}
+.search input,
+.search button{font-size:1.5em;}
+.search input{border-radius:9em;border:3px solid chartreuse;padding:.3em 1em;background:black;color:blue;}
+.search button{position:relative;
+
+	display: inline-block;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	font-size: 16px;
+	line-height: 20px;
+	color:blue;
+	text-shadow: 0 2px 0 rgba(255,255,255,0.75);
+	background:white;
+	vertical-align: middle;
+	cursor: pointer;
+
+	border:6px ridge #bbb;
+}
+
+.iframe-comet{position:absolute;top:300px;right:0;width:300px;height:500px;border:3px solid chartreuse;}
+.search button img{position:absolute;}
+
+.u2bloop{color:#FFF;}
+#u2bloop{}
+.xiamibb{position:absolute;top:815px;left:824px;}
+</style>
+<br />
+<b>Parse error</b>:  syntax error, unexpected T_STRING in <b>D:\NPMserv\www\file\index.php</b> on line <b>136</b><br />
+
+<h3>Hacked by RR</h3>
+
+
+
+
+<style>
+.播放器{
+	position: absolute;
+	top:300px;
+	width: 300px;
+	height: 500px;
+	right:0;
+	border:3px solid chartreuse;
+	z-index:1;
+}
+#音乐封面图{
+	width:100%;
+    transform: rotateX(1deg) rotateY(1deg) rotateZ(1deg) translate(-40px,-15px);
+}
+#播放音乐{
+	font-size:1.4em;
+	font-weight:800;
+	border:2px dashed yellow;
+}
+#下一首{
+	background:blue;
+	border:2px dashed chartreuse;
+	color:white;
+	font-size:1.2em;
+}
+#音乐标题{
+	margin:4px 0;
+}
+#播放器{
+	height:40px;
+}
+</style>
+
+
+<div class=播放器>
+	<img id=音乐封面图>
+	<h4 id=音乐标题></h4>
+	<audio id=播放器 controls></audio>
+	<button id=播放音乐>► / || 播放/暂停</button>
+	<button id=下一首>⇥ 下一首</button>
+</div>
+
+
+
+
+<script>
+var 歌曲列表=[
+    {
+        "id": 1772582996,
+        "title": "ビジョナリー (M@STER VERSION) 亜美/真美ソロ・リミックス",
+        "duration": 219,
+        "aid": 1893384353
+    },
+    {
+        "id": 1772582988,
+        "title": "MUSIC♪ (M@STER VERSION) 亜美/真美ソロ・リミックス",
+        "duration": 303,
+        "aid": 1893384353
+    },
+    {
+        "id": 1770729852,
+        "title": "自転車",
+        "duration": 220,
+        "aid": 487025
+    },
+    {
+        "id": 1770665082,
+        "title": "今日も元気!",
+        "duration": 102,
+        "aid": 481443
+    },
+    {
+        "id": 1771799225,
+        "title": "ゆりゆららららゆるゆり大事件",
+        "duration": 232,
+        "aid": 1365560192
+    },
+    {
+        "id": 1769860990,
+        "title": "Tip Taps Tip (Version Miki)",
+        "duration": 284,
+        "aid": 410406
+    },
+    {
+        "id": 1770355619,
+        "title": "01",
+        "duration": 366,
+        "aid": 454095
+    },
+    {
+        "id": 1770914817,
+        "title": "開演のあいさつ",
+        "duration": 138,
+        "aid": 504503
+    },
+    {
+        "id": 1770014053,
+        "title": "For You",
+        "duration": 244,
+        "aid": 423890
+    },
+    {
+        "id": 1774188009,
+        "title": "Sparkle☆Time!!",
+        "duration": 276,
+        "aid": 1129262669
+    },
+    {
+        "id": 1804954782,
+        "title": "アイリス",
+        "duration": 247,
+        "aid": 2103942253
+    },
+    {
+        "id": 1806094313,
+        "title": "ADAMAS",
+        "duration": 225,
+        "aid": 2104084638
+    },
+    {
+        "id": 1776111940,
+        "title": "ルンがピカッと光ったら～Album Version～",
+        "duration": 266,
+        "aid": 2100342544
+    },
+    {
+        "id": 1776424793,
+        "title": "涙目爆発音",
+        "duration": 254,
+        "aid": 2100391607
+    },
+    {
+        "id": 1771356309,
+        "title": "残酷な天使のテーゼ",
+        "duration": 253,
+        "aid": 546414
+    },
+    {
+        "id": 1770338379,
+        "title": "For You 〜アニメver.〜",
+        "duration": 93,
+        "aid": 452527
+    },
+    {
+        "id": 1770017136,
+        "title": "いつだって。",
+        "duration": 298,
+        "aid": 424150
+    },
+    {
+        "id": 1770999943,
+        "title": "太陽曰く燃えよカオス",
+        "duration": 233,
+        "aid": 512723
+    },
+    {
+        "id": 1774731452,
+        "title": "降りかかる罰",
+        "duration": 64,
+        "aid": 2100195596
+    },
+    {
+        "id": 1774731448,
+        "title": "憧れのお城",
+        "duration": 80,
+        "aid": 2100195596
+    },
+    {
+        "id": 1792590679,
+        "title": "潮風",
+        "duration": 224,
+        "aid": 2102401336
+    },
+    {
+        "id": 1795274053,
+        "title": "I & I",
+        "duration": 324,
+        "aid": 2102652961
+    },
+    {
+        "id": 1770062253,
+        "title": "II into the light (殺人考察(後))",
+        "duration": 436,
+        "aid": 428302
+    },
+    {
+        "id": 1774486966,
+        "title": "北宇治四重奏 第3番 コントラバス",
+        "duration": 184,
+        "aid": 1136354341
+    },
+    {
+        "id": 1796866447,
+        "title": "インドア系ならトラックメイカー",
+        "duration": 195,
+        "aid": 2102870699
+    },
+    {
+        "id": 1773418188,
+        "title": "ギガンティックO.T.N -Big Death Edition-",
+        "duration": 207,
+        "aid": 107742873
+    },
+    {
+        "id": 1773418187,
+        "title": "アシンメトリー",
+        "duration": 255,
+        "aid": 107742873
+    },
+    {
+        "id": 1773418186,
+        "title": "-BWW SCREAM-",
+        "duration": 82,
+        "aid": 107742873
+    },
+    {
+        "id": 1773418185,
+        "title": "Echo",
+        "duration": 213,
+        "aid": 107742873
+    },
+    {
+        "id": 1773418184,
+        "title": "No title",
+        "duration": 244,
+        "aid": 107742873
+    },
+    {
+        "id": 1773418183,
+        "title": "-Interlude-",
+        "duration": 29,
+        "aid": 107742873
+    },
+    {
+        "id": 1769274783,
+        "title": "君が好きだと叫びたい",
+        "duration": 232,
+        "aid": 360206
+    },
+    {
+        "id": 1773418180,
+        "title": "ヒビカセ",
+        "duration": 250,
+        "aid": 107742873
+    },
+    {
+        "id": 1796866445,
+        "title": "ロボティックガール",
+        "duration": 263,
+        "aid": 2102870699
+    },
+    {
+        "id": 1770062243,
+        "title": "III rain goes up (殺人考察(前))",
+        "duration": 101,
+        "aid": 428302
+    },
+    {
+        "id": 2072306,
+        "title": "Around The World",
+        "duration": 311,
+        "aid": 167987
+    },
+    {
+        "id": 1769000743,
+        "title": "around the world",
+        "duration": 291,
+        "aid": 337723
+    },
+    {
+        "id": 1770158907,
+        "title": "Scarlet Ballet",
+        "duration": 251,
+        "aid": 436734
+    },
+    {
+        "id": 3616731,
+        "title": "FLY ME TO THE MOON",
+        "duration": 273,
+        "aid": 324726
+    },
+    {
+        "id": 1795510538,
+        "title": "DEJA VU",
+        "duration": 264,
+        "aid": 2102688246
+    },
+    {
+        "id": 1795510532,
+        "title": "DON'T STOP THE MUSIC",
+        "duration": 290,
+        "aid": 2102688246
+    },
+    {
+        "id": 1769639452,
+        "title": "プリオシン海岸",
+        "duration": 266,
+        "aid": 390829
+    },
+    {
+        "id": 1770174052,
+        "title": "ショコラビーツ",
+        "duration": 216,
+        "aid": 437972
+    },
+    {
+        "id": 1770535957,
+        "title": "トリノコシティ",
+        "duration": 204,
+        "aid": 470038
+    },
+    {
+        "id": 1771692297,
+        "title": "庭園にて。",
+        "duration": 188,
+        "aid": 1861433117
+    },
+    {
+        "id": 1770592230,
+        "title": "微笑みの爆弾",
+        "duration": 274,
+        "aid": 475095
+    },
+    {
+        "id": 1770172847,
+        "title": "Os-宇宙人",
+        "duration": 203,
+        "aid": 437872
+    },
+    {
+        "id": 1773747648,
+        "title": "NEXT TO YOU",
+        "duration": 225,
+        "aid": 1417092562
+    },
+    {
+        "id": 1773747641,
+        "title": "GALAXY",
+        "duration": 199,
+        "aid": 1417092562
+    },
+    {
+        "id": 1773747639,
+        "title": "BLISS",
+        "duration": 225,
+        "aid": 1417092562
+    },
+    {
+        "id": 1773747638,
+        "title": "I AM",
+        "duration": 318,
+        "aid": 1417092562
+    },
+    {
+        "id": 1774054890,
+        "title": "Catch You Catch Me",
+        "duration": 222,
+        "aid": 1626050000
+    },
+    {
+        "id": 388166,
+        "title": "特务J",
+        "duration": 213,
+        "aid": 32603
+    },
+    {
+        "id": 1795286779,
+        "title": "e of s",
+        "duration": 230,
+        "aid": 2102654894
+    },
+    {
+        "id": 1769476764,
+        "title": "インスタントラジオ",
+        "duration": 248,
+        "aid": 377668
+    },
+    {
+        "id": 1770838366,
+        "title": "again",
+        "duration": 256,
+        "aid": 497303
+    },
+    {
+        "id": 3297555,
+        "title": "涙そうそう ",
+        "duration": 260,
+        "aid": 297624
+    },
+    {
+        "id": 1769268484,
+        "title": "ALWAYS",
+        "duration": 311,
+        "aid": 359679
+    },
+    {
+        "id": 1769651696,
+        "title": "unjust life",
+        "duration": 165,
+        "aid": 391980
+    },
+    {
+        "id": 1769651665,
+        "title": "school days",
+        "duration": 141,
+        "aid": 391980
+    },
+    {
+        "id": 3493353,
+        "title": "愉快な音楽1~猪突猛進",
+        "duration": 25,
+        "aid": 314915
+    },
+    {
+        "id": 3517377,
+        "title": "M16",
+        "duration": 61,
+        "aid": 316825
+    },
+    {
+        "id": 2072340,
+        "title": "Running In The “90S”",
+        "duration": 285,
+        "aid": 167987
+    },
+    {
+        "id": 2072309,
+        "title": "Over Drive",
+        "duration": 264,
+        "aid": 167987
+    },
+    {
+        "id": 1805893599,
+        "title": "名前のない空腹",
+        "duration": 208,
+        "aid": 2104051677
+    },
+    {
+        "id": 1805893598,
+        "title": "Another colony",
+        "duration": 252,
+        "aid": 2104051677
+    },
+    {
+        "id": 1771086117,
+        "title": "夜空",
+        "duration": 196,
+        "aid": 502365
+    },
+    {
+        "id": 1802946579,
+        "title": "アフターザレイン ~メインテーマ~",
+        "duration": 189,
+        "aid": 2103689052
+    },
+    {
+        "id": 1773387341,
+        "title": "季節のシャッター",
+        "duration": 307,
+        "aid": 1806716458
+    },
+    {
+        "id": 1771397062,
+        "title": "すたこらドリーム",
+        "duration": 238,
+        "aid": 550470
+    },
+    {
+        "id": 1774187999,
+        "title": "H-A-J-I-M-A-R-I-U-T-A-!!",
+        "duration": 239,
+        "aid": 1129262669
+    },
+    {
+        "id": 1771086111,
+        "title": "追憶",
+        "duration": 117,
+        "aid": 502365
+    },
+    {
+        "id": 1770665091,
+        "title": "i",
+        "duration": 342,
+        "aid": 481443
+    },
+    {
+        "id": 1771397061,
+        "title": "?でわっしょい",
+        "duration": 230,
+        "aid": 550470
+    },
+    {
+        "id": 1770729856,
+        "title": "魔法をかけて! (M@STER VERSION)",
+        "duration": 251,
+        "aid": 487025
+    },
+    {
+        "id": 1770729861,
+        "title": "約束 (TV VERSION)",
+        "duration": 253,
+        "aid": 487025
+    },
+    {
+        "id": 1770665090,
+        "title": "自分REST@RT (M@STER VERSION)",
+        "duration": 346,
+        "aid": 481443
+    },
+    {
+        "id": 1770665085,
+        "title": "蒼い鳥 (Piano Version)",
+        "duration": 122,
+        "aid": 481443
+    },
+    {
+        "id": 1770379567,
+        "title": "鳥の詩",
+        "duration": 379,
+        "aid": 456185
+    },
+    {
+        "id": 1770379565,
+        "title": "目が逢う瞬間",
+        "duration": 275,
+        "aid": 456185
+    },
+    {
+        "id": 1770436522,
+        "title": "おはよう!!朝ご飯(MASTER VERSION)",
+        "duration": 230,
+        "aid": 461301
+    },
+    {
+        "id": 1770436518,
+        "title": "GO MY WAY!!(MASTER VERSION)",
+        "duration": 288,
+        "aid": 461301
+    },
+    {
+        "id": 1770436512,
+        "title": "キラメキラリ",
+        "duration": 243,
+        "aid": 461301
+    },
+    {
+        "id": 1772492899,
+        "title": "M@STERPIECE",
+        "duration": 345,
+        "aid": 1890200559
+    },
+    {
+        "id": 1770786232,
+        "title": "空",
+        "duration": 245,
+        "aid": 492143
+    },
+    {
+        "id": 1770786231,
+        "title": "花 (NEW MIX)",
+        "duration": 327,
+        "aid": 492143
+    },
+    {
+        "id": 1770786230,
+        "title": "眠り姫",
+        "duration": 369,
+        "aid": 492143
+    },
+    {
+        "id": 1770006472,
+        "title": "ALL 4 YOU",
+        "duration": 250,
+        "aid": 423234
+    },
+    {
+        "id": 1770006469,
+        "title": "Date of Birth",
+        "duration": 100,
+        "aid": 423234
+    },
+    {
+        "id": 1770775446,
+        "title": "明日はいっしょにハイキング",
+        "duration": 274,
+        "aid": 491112
+    },
+    {
+        "id": 1769022890,
+        "title": "M11",
+        "duration": 44,
+        "aid": 339400
+    },
+    {
+        "id": 1768990390,
+        "title": "翼をください-Tribute to “Sound of Music”",
+        "duration": 371,
+        "aid": 336866
+    },
+    {
+        "id": 1768990353,
+        "title": "2EM21_KK_C01_Str+AcGuit",
+        "duration": 146,
+        "aid": 336866
+    },
+    {
+        "id": 1770006477,
+        "title": "ダーリンベイビ",
+        "duration": 272,
+        "aid": 423234
+    },
+    {
+        "id": 1770006473,
+        "title": "ウラハラブ",
+        "duration": 243,
+        "aid": 423234
+    },
+    {
+        "id": 1770006476,
+        "title": "らぶこーる",
+        "duration": 297,
+        "aid": 423234
+    },
+    {
+        "id": 1770006475,
+        "title": "想いはRain Rain",
+        "duration": 251,
+        "aid": 423234
+    },
+    {
+        "id": 1770006474,
+        "title": "ハッピークレセント",
+        "duration": 221,
+        "aid": 423234
+    },
+    {
+        "id": 1770006471,
+        "title": "YES-TODAY",
+        "duration": 272,
+        "aid": 423234
+    },
+    {
+        "id": 1770006470,
+        "title": "LOVE KANON",
+        "duration": 200,
+        "aid": 423234
+    },
+    {
+        "id": 1770729847,
+        "title": "CHANGE!!!! (TV SIZE)",
+        "duration": 93,
+        "aid": 487025
+    },
+    {
+        "id": 1770665092,
+        "title": "キミはメロディ (M@STER VERSION)",
+        "duration": 240,
+        "aid": 481443
+    },
+    {
+        "id": 1770665089,
+        "title": "マリオネットの心 (M@STER VERSION)",
+        "duration": 247,
+        "aid": 481443
+    },
+    {
+        "id": 1770665087,
+        "title": "ショッキングな彼",
+        "duration": 298,
+        "aid": 481443
+    },
+    {
+        "id": 1770665088,
+        "title": "GO MY WAY!! (BGM VERSION)",
+        "duration": 135,
+        "aid": 481443
+    },
+    {
+        "id": 1770665086,
+        "title": "ふるふるフューチャー☆",
+        "duration": 289,
+        "aid": 481443
+    },
+    {
+        "id": 1770729852,
+        "title": "自転車",
+        "duration": 220,
+        "aid": 487025
+    },
+    {
+        "id": 1775541376,
+        "title": "スーサイドさかな-弾き語りver-",
+        "duration": 225,
+        "aid": 2100265654
+    },
+    {
+        "id": 1772108229,
+        "title": "恋愛したいっ! (SUZU solo ver.)",
+        "duration": 233,
+        "aid": 1876635640
+    },
+    {
+        "id": 1770311879,
+        "title": "おもいでのはじまり",
+        "duration": 243,
+        "aid": 450028
+    },
+    {
+        "id": 1802590795,
+        "title": "よっし始めようか!",
+        "duration": 136,
+        "aid": 2103591425
+    },
+    {
+        "id": 1769429292,
+        "title": "名探偵コナン メイン・テーマ (ヴォーカル・ヴァージョン)",
+        "duration": 113,
+        "aid": 373476
+    },
+    {
+        "id": 1769876910,
+        "title": "花海",
+        "duration": 264,
+        "aid": 411889
+    },
+    {
+        "id": 1771463681,
+        "title": "Dark Defender =3EM06=",
+        "duration": 224,
+        "aid": 557073
+    },
+    {
+        "id": 1774446758,
+        "title": "My Soul, Your Beats! -Piano Arrange Ver.-",
+        "duration": 392,
+        "aid": 335307871
+    },
+    {
+        "id": 1795730050,
+        "title": "ひとやすみ",
+        "duration": 6,
+        "aid": 2102725074
+    },
+    {
+        "id": 1771699940,
+        "title": "めぐる季節",
+        "duration": 210,
+        "aid": 761780043
+    },
+    {
+        "id": 1771699939,
+        "title": "風の谷のナウシカ",
+        "duration": 237,
+        "aid": 761780043
+    },
+    {
+        "id": 1771364664,
+        "title": "名探偵コナン メイン・テーマ (世紀末ヴァージョン)",
+        "duration": 167,
+        "aid": 441853
+    },
+    {
+        "id": 1774945506,
+        "title": "Candy Dash",
+        "duration": 205,
+        "aid": 2100219944
+    },
+    {
+        "id": 1776319257,
+        "title": "INTO THE LIGHT",
+        "duration": 392,
+        "aid": 2100376469
+    },
+    {
+        "id": 1806304987,
+        "title": "変態",
+        "duration": 116,
+        "aid": 2104098973
+    },
+    {
+        "id": 1769489860,
+        "title": "Arrietty’s Song",
+        "duration": 209,
+        "aid": 378735
+    },
+    {
+        "id": 1775863928,
+        "title": "STYX HELIX",
+        "duration": 291,
+        "aid": 2100305810
+    },
+    {
+        "id": 1771614675,
+        "title": "太陽と月",
+        "duration": 228,
+        "aid": 572440
+    },
+    {
+        "id": 1769962981,
+        "title": "ひととき",
+        "duration": 107,
+        "aid": 419623
+    },
+    {
+        "id": 1776110944,
+        "title": "key of life",
+        "duration": 246,
+        "aid": 2100342388
+    },
+    {
+        "id": 3517333,
+        "title": "M01",
+        "duration": 129,
+        "aid": 316822
+    },
+    {
+        "id": 1769812555,
+        "title": "Last regrets -past winter mix-",
+        "duration": 339,
+        "aid": 405971
+    },
+    {
+        "id": 1771766407,
+        "title": "よってS.O.S",
+        "duration": 221,
+        "aid": 864202201
+    },
+    {
+        "id": 1795770054,
+        "title": "るーららるーらーるららるーらー",
+        "duration": 198,
+        "aid": 2102730530
+    },
+    {
+        "id": 1795172064,
+        "title": "アノニマス",
+        "duration": 270,
+        "aid": 2102643562
+    },
+    {
+        "id": 1795172065,
+        "title": "フラレガイガール",
+        "duration": 367,
+        "aid": 2102643562
+    },
+    {
+        "id": 1776158646,
+        "title": "るーららるーらーるららるーらー",
+        "duration": 196,
+        "aid": 2100350568
+    },
+    {
+        "id": 1795627909,
+        "title": "ニーチェと君 -弾き語りver",
+        "duration": 212,
+        "aid": 2102643562
+    },
+    {
+        "id": 1804025432,
+        "title": "とにかく脚を回せ",
+        "duration": 100,
+        "aid": 2103844678
+    },
+    {
+        "id": 1770366712,
+        "title": "白い花",
+        "duration": 299,
+        "aid": 455096
+    },
+    {
+        "id": 1770366721,
+        "title": "白い花",
+        "duration": 290,
+        "aid": 455096
+    },
+    {
+        "id": 1776185253,
+        "title": "紺野さんのテーマ",
+        "duration": 100,
+        "aid": 2100354452
+    },
+    {
+        "id": 2128305,
+        "title": "EM17_Edit#070705",
+        "duration": 165,
+        "aid": 172240
+    },
+    {
+        "id": 1806304969,
+        "title": "青春ブタ野郎",
+        "duration": 177,
+        "aid": 2104098973
+    },
+    {
+        "id": 1771486296,
+        "title": "恋いろSHOOTING",
+        "duration": 224,
+        "aid": 559194
+    },
+    {
+        "id": 1771310576,
+        "title": "潮風のハーモニー(5人 Ver.)",
+        "duration": 93,
+        "aid": 541994
+    },
+    {
+        "id": 3435926,
+        "title": "空に光る",
+        "duration": 308,
+        "aid": 310384
+    },
+    {
+        "id": 1802136940,
+        "title": "Catch the Moment",
+        "duration": 281,
+        "aid": 2103560550
+    },
+    {
+        "id": 1774644006,
+        "title": "オーロラソース -street弾き語りver-",
+        "duration": 281,
+        "aid": 1136752273
+    },
+    {
+        "id": 1795511458,
+        "title": "平行線",
+        "duration": 299,
+        "aid": 2102688370
+    },
+    {
+        "id": 1776158647,
+        "title": "cigarette -弾き語りver-",
+        "duration": 272,
+        "aid": 2100350568
+    },
+    {
+        "id": 1774495552,
+        "title": "ミカヅキ",
+        "duration": 262,
+        "aid": 1136752273
+    },
+    {
+        "id": 1806304996,
+        "title": "打ち上げ花火",
+        "duration": 108,
+        "aid": 2104098973
+    },
+    {
+        "id": 1769000742,
+        "title": "Rage Your Dream",
+        "duration": 279,
+        "aid": 337723
+    },
+    {
+        "id": 1802140849,
+        "title": "イオルフ、別れの一族",
+        "duration": 126,
+        "aid": 2103560530
+    },
+    {
+        "id": 1802140864,
+        "title": "ウィアートル",
+        "duration": 287,
+        "aid": 2103560530
+    },
+    {
+        "id": 1802140867,
+        "title": "愛情の交錯",
+        "duration": 155,
+        "aid": 2103560530
+    },
+    {
+        "id": 1774137460,
+        "title": "light your sword",
+        "duration": 124,
+        "aid": 1728036271
+    },
+    {
+        "id": 1770062239,
+        "title": "in the garden of sinners",
+        "duration": 139,
+        "aid": 428302
+    },
+    {
+        "id": 1769861470,
+        "title": "いつも何度でも",
+        "duration": 216,
+        "aid": 410455
+    },
+    {
+        "id": 1770103808,
+        "title": "夏影",
+        "duration": 353,
+        "aid": 431874
+    },
+    {
+        "id": 3659095,
+        "title": "BATTAILLE DECISIVE(EM20)",
+        "duration": 285,
+        "aid": 328331
+    },
+    {
+        "id": 2072321,
+        "title": "Don’T Need You",
+        "duration": 332,
+        "aid": 167987
+    },
+    {
+        "id": 1769766271,
+        "title": "Early tea",
+        "duration": 106,
+        "aid": 402148
+    },
+    {
+        "id": 1771615791,
+        "title": "未来ヒストリー",
+        "duration": 258,
+        "aid": 572548
+    },
+    {
+        "id": 3498503,
+        "title": "Little fragments",
+        "duration": 124,
+        "aid": 315324
+    },
+    {
+        "id": 1771356312,
+        "title": "MISATO",
+        "duration": 199,
+        "aid": 546414
+    },
+    {
+        "id": 1769476766,
+        "title": "死の魔法",
+        "duration": 364,
+        "aid": 377668
+    },
+    {
+        "id": 1796759555,
+        "title": "その未来へ",
+        "duration": 256,
+        "aid": 2102855644
+    },
+    {
+        "id": 1774376791,
+        "title": "I Found You",
+        "duration": 205,
+        "aid": 733323144
+    },
+    {
+        "id": 1771053391,
+        "title": "薔薇色世界の扉",
+        "duration": 162,
+        "aid": 517636
+    },
+    {
+        "id": 1774016675,
+        "title": "猪突猛進",
+        "duration": 90,
+        "aid": 2024924986
+    },
+    {
+        "id": 1795294523,
+        "title": "夢でまたあえたらなあ",
+        "duration": 197,
+        "aid": 2102656351
+    },
+    {
+        "id": 1806818965,
+        "title": "There's No Ending",
+        "duration": 210,
+        "aid": 2104200294
+    },
+    {
+        "id": 1769955532,
+        "title": "RING RING RING!",
+        "duration": 235,
+        "aid": 418958
+    },
+    {
+        "id": 3442952,
+        "title": "双星",
+        "duration": 217,
+        "aid": 310910
+    },
+    {
+        "id": 1795766451,
+        "title": "馬鹿ふたり",
+        "duration": 329,
+        "aid": 2102730101
+    },
+    {
+        "id": 3435903,
+        "title": "町, 時の流れ, 人",
+        "duration": 268,
+        "aid": 310384
+    },
+    {
+        "id": 1769006635,
+        "title": "Super Driver",
+        "duration": 259,
+        "aid": 338128
+    },
+    {
+        "id": 3402258,
+        "title": "MY ALL",
+        "duration": 327,
+        "aid": 307618
+    },
+    {
+        "id": 3494846,
+        "title": "Yes! I Will… (エンディング・TVサイズ)",
+        "duration": 74,
+        "aid": 315035
+    },
+    {
+        "id": 1772217859,
+        "title": "ブルーウォーター",
+        "duration": 247,
+        "aid": 380252291
+    },
+    {
+        "id": 1769031536,
+        "title": "君だけの旅路",
+        "duration": 237,
+        "aid": 340063
+    },
+    {
+        "id": 1798014940,
+        "title": "true my heart",
+        "duration": 289,
+        "aid": 2102961848
+    },
+    {
+        "id": 1795810816,
+        "title": "Chasing The Sun(Again)",
+        "duration": 309,
+        "aid": 2102736737
+    },
+    {
+        "id": 2074181,
+        "title": "晴れた日に…",
+        "duration": 136,
+        "aid": 168113
+    },
+    {
+        "id": 1773900332,
+        "title": "メインテーマ・山に登るということ",
+        "duration": 217,
+        "aid": 122250643
+    },
+    {
+        "id": 1802412901,
+        "title": "キャンプ場のテーマ~高ボッチ、イーストウッド~",
+        "duration": 398,
+        "aid": 2103604187
+    },
+    {
+        "id": 1771830501,
+        "title": "3EM12_SS_101_2femmes_option",
+        "duration": 67,
+        "aid": 1866693653
+    },
+    {
+        "id": 1769102387,
+        "title": "Both of You, Dance Like You Want to Win!",
+        "duration": 111,
+        "aid": 345733
+    },
+    {
+        "id": 1770455909,
+        "title": "Let The Bullets Fly",
+        "duration": 310,
+        "aid": 462996
+    },
+    {
+        "id": 376061,
+        "title": "断了的弦",
+        "duration": 293,
+        "aid": 6649
+    },
+    {
+        "id": 3352384,
+        "title": "突然",
+        "duration": 274,
+        "aid": 303154
+    },
+    {
+        "id": 1769870704,
+        "title": "月灯りふんわり落ちてくる夜",
+        "duration": 274,
+        "aid": 411365
+    },
+    {
+        "id": 3426760,
+        "title": "Birdland",
+        "duration": 383,
+        "aid": 309604
+    },
+    {
+        "id": 3582054,
+        "title": "For フルーツバスケット",
+        "duration": 264,
+        "aid": 321891
+    },
+    {
+        "id": 1770186265,
+        "title": "ルル （tv-size）",
+        "duration": 95,
+        "aid": 439027
+    },
+    {
+        "id": 1772218061,
+        "title": "C-16 起死回生",
+        "duration": 130,
+        "aid": 380252291
+    },
+    {
+        "id": 1772218067,
+        "title": "C-18",
+        "duration": 103,
+        "aid": 380252291
+    },
+    {
+        "id": 1772218060,
+        "title": "C-15 万能戦艦N-ノーチラス号b",
+        "duration": 151,
+        "aid": 380252291
+    },
+    {
+        "id": 2128294,
+        "title": "EM08_B17_Edit#070705",
+        "duration": 50,
+        "aid": 172240
+    },
+    {
+        "id": 1796931130,
+        "title": "春の訪れ",
+        "duration": 100,
+        "aid": 2102883992
+    },
+    {
+        "id": 1796438135,
+        "title": "Chase The Stars",
+        "duration": 278,
+        "aid": 2102809503
+    }
+];
+
+
+var 当前播放次序 = 0;
+
+// var 播放器 = new Audio();
+
+var 真播放啊都 = ()=>{
+	var 歌曲信息 = 歌曲列表[当前播放次序];
+	播放器.src = 'http://y.sojo.im:233/xiami/'+歌曲信息.id;
+	播放器.play();
+	音乐标题.innerHTML = 歌曲信息.title;
+	音乐封面图.src = 'http://y.sojo.im:666/xiami/'+歌曲信息.aid+'.jpg!w520h520';
+}
+真播放啊都();
+
+播放音乐.onclick=()=>{
+	if(!播放器.src){
+		真播放啊都();
+	}else if(播放器.paused){
+		播放器.play();
+	}else{
+		播放器.pause();
+	}
+};
+
+下一首.onclick=()=>{
+	当前播放次序++;
+
+	if(当前播放次序>=歌曲列表.length){
+		当前播放次序=0;
+	}
+
+	真播放啊都();
+};
+
+播放器.onended=()=>{
+	下一首.onclick();
+}
+</script>
+
+
+<!-- <embed class="xiamibb" src="http://www.xiami.com/widget/452455_1772582996,1772209501,1772582998,1772361370,1772361372,1772361373,1772361374,1772361375,1772361376,1772361377,1772361378,1772361379,1772361380,1772361381,1772361382,1772361383,1772361384,1772361385,1772361386,1772361387,1772361388,1772361389,1772361390,1772361391,1772361392,1772361393,1772361394,1772361395,1772361396,1772361397,1772361398,1772361371,1772361399,1770729852,1770665082,1771799225,1769860990,1770355619,1770914817,1770364010,1770364011,1770364012,1770364013,1770364014,1770364015,1770364016,1770364017,1771455582,1771455583,1771455584,_235_700_5695c1_457cb4_1/multiPlayer.swf" type="application/x-shockwave-flash" width="235" height="700" wmode="opaque"></embed> -->
+<marquee behavior=alternate>
+	<a href="//x.mouto.org/wb" target="_blank"><img src="images/a15b4afegw1eoqaeegc66g203102tadg.jpg">图片上传...</a>
+	<a href="javascript:alert()"><img src="images/a15b4afegw1eoqai9p6utg201e01eq3d.jpg"> src=&quot;这里插入图片地址&quot;></a>
+	<img src="images/a15b4afegw1eoqai9p6utg201e01eq3d.jpg">
+	<img src="images/a15b4afegw1es1ln7faeeg202801vjt2.jpg">
+	<img src="images/a15b4afegw1eoqai9p6utg201e01eq3d.jpg">
+	<img src="images/a15b4afegw1es1ln7faeeg202801vjt2.jpg">
+	<img src="images/a15b4afegw1eoqai9p6utg201e01eq3d.jpg">
+	<img src="images/a15b4afegw1es1ln7faeeg202801vjt2.jpg">
+	<img src="images/a15b4afegw1eoqai9p6utg201e01eq3d.jpg">
+	<img src="images/a15b4afegw1es1ln7faeeg202801vjt2.jpg">
+	<img src="images/a15b4afegw1eoqai9p6utg201e01eq3d.jpg">
+	<img src="images/a15b4afegw1es1ln7faeeg202801vjt2.jpg">
+	<img src="images/a15b4afegw1eoqai9p6utg201e01eq3d.jpg">
+	<img src="images/a15b4afegw1es1ln7faeeg202801vjt2.jpg">
+	<img src="images/a15b4afegw1eoqai9p6utg201e01eq3d.jpg">
+	<img src="images/a15b4afegw1es1ln7faeeg202801vjt2.jpg">
+</marquee>
+
+
+快来关注我！！-----v<iframe src="http://widget.weibo.com/relationship/followbutton.php?btn=red&amp;style=4&amp;uid=5111733553&amp;width=100%&amp;height=64&amp;language=zh_tw" width="100%" height="64" frameborder="0" scrolling="no" marginheight="0"></iframe>
+^----快来关注我！！！
+
+<!-- <a href="https://itunes.apple.com/cn/app/zheng-xu/id1157594484?mt=8" target="_blank" style="position:absolute;top:540px;right:320px;width:240px;"><img src="images/a15b4afegw1f87dx4i0yeg206u02lagr.jpg" style="width:180px;height:60px;"><big>魔蛤</big>-表情包 <small>开发商：EyreFree</small>
+ -->
+</a>
+
+<div id="xianjing" style="position:absolute;top:230px;left:300px;height:250px;width:500px;border:4px ridge #DDD;overflow:auto;background:#FFF;">
+	<img src="images/a15b4afegw1eu0w3zc98aj20hv0m2wl1.jpg" style="border:0;">	
+</div>
+<script>
+xianjing.onclick=function(){
+
+	if(window.cNz)
+		cNz('又中招了！哈哈哈');
+	var o='账户信息上传失败，稍后重试|部分文件或目录写保护，请重新上传。|分析完成，上传 C:/Program Files/QQ2014/bin/data.qic|分析成功上传部分|上传目录结构中，请稍等...|您已成功授权读取本地文件权限'.split('|');
+	var i=o.length;
+	while(i--)
+		alert(o[i]);
+}
+</script>
+<ul class="nav">
+	<li><a href="http://luxun.pro/#sojo"><img src="images/a15b4afegw1f2p8i9fv64g204c04cgld.jpg" alt="鲁迅追番"></a></li>
+	<li><h2><img src="images/a15b4afegw1eoqbro7u8xg2013016glk.jpg">&nbsp;<font color="#FF0000">你</font><font color="#FF5A00">好</font><font color="#FFB400" style="font-size:1.3em;">世界</font><font color="#FFff00"> </font><font color="#A5ff00">，</font><font color="#4Bff00">你</font><font color="#00ff00">好</font><font color="#00ff5A"> </font><blink><font color="#00ffB4">世</font><font color="#00ffff">界</font><font color="#00B4ff">o</font><font color="#005Aff">ha</font><font color="#0000ff">ll</font><font color="#4B00ff">o</font><font color="#A500ff"> </font><font color="#FF00ff">wo</font><font color="#FF00B4">ld</font></blink></h2></li>
+	<li><a href=""><img src="images/a15b4afegw1eoqbt2izckg201e01e742.jpg"> 首页&lt;</a></li>
+</ul>
+
+
+<a target="_blank" href="https://steamcommunity.com/id/itorr/" style="position:absolute;top:300px;left:840px;">
+	<img src="images/a15b4afegy1feqy9fz9sgj208p08pq4s.jpg" alt="steam 个人页面" style="width:100px">
+</a>
+
+<big>
+	<a href="#友情链接" style="color:yellow">跳转到友情链接📮</a>
+</big>
+<a href="http://a/%%30%30" target="_blank">移动崩溃！</a>
+
+<style>
+.ds-share{border:5px solid blue;margin:2em;
+	display:inline-block;}
+.ds-share-icons-more{display:inline-block !important;}
+
+.ds-share ul{overflow: hidden;}
+.ds-share li{float:left;padding:0;}
+.ds-share-icons-footer{display:none;}
+
+ul.ds-comments{
+	overflow:hidden;
+}
+.ds-post{
+	float:left;
+	margin:.1em;
+}
+
+.ds-current{
+	color:#000;
+	font-size:2em;
+	display:inline-block;
+	padding:.1em .3em;
+}
+</style>
+
+
+
+
+
+<div class="ds-share flat" data-title="这是一个超棒的前端页面" data-images="images/a15b4afegw1eoqb7s9uegg2064064q9l.jpg" data-content="没见过比这还棒的前端演示了！" data-url="http://sojo.im">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-32">
+      	
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      	
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+
+
+<form class="search" action="#">
+	<input placeholder="sou'suo">
+	<button type="submit">搜索(Ctrl+Enter 暂时不可用OAQ<img src="images/a15b4afegw1eoqb7tmib7j203c034dfq.jpg">)</button>
+</form>
+
+<img src="images/a15b4afegw1eowobfq39yg201j00r3ys.jpg">
+<video id="u2b" controls="true" x-webkit-airplay="allow" data-youtube-id="CXDFNYJp5Io" title="秘蔵映像！春香と段ボール箱" style="width:320px; height:180px;" src="img/videoplayback.mp4" autoplay></video>
+<label class="u2bloop"><input id="u2bloop" type="checkbox" value="1" />鬼畜循环开启！</label>
+
+<script>
+u2b.onended=function(){
+u2b.ontimeupdate=function(e){
+	if(u2bloop.checked&&u2b.currentTime>2.2)
+		u2b.currentTime=1.9
+}
+u2b.currentTime=1.9
+u2b.play()}
+u2bloop.onclick=u2b.onended
+</script>
+<div style="position:absolute;top:200px;right:300px;pointer-events:none"><script src="http://count.2881.com/count/count.asp?id=59061&sx=1&ys=32"></script></div>
+<h1>王守义与哈士奇<img src="images/a15b4afegw1eoqb7s9uegg2064064q9l.jpg"></h1>
+
+
+<style>
+body{
+			perspective:1000px;
+	-webkit-perspective:1000px;
+}
+.host-h4{
+	color:#FFF;font-size:26px;
+	text-shadow:0 2px 0 #000;
+	-webkit-transform:rotateZ(3deg);
+}
+.host-h4 img{
+	height:300px;
+	vertical-align: middle;
+}
+</style>
+<h4 class="host-h4 r"><font color="green">承接 博客优化、创意单页 整个流程</font>：<img src="images/a15b4afegw1exooqf09vjj20jc0p842o.jpg" alt=""><small>(请先打钱再聊天😇)</small></h4>
+<h4 class="host-h4 l"><font color="#0000ff">主</font>机<big>托</big>管：<a href="https://i.zhujike.com/flag/17">🌚HtTp://ZhuJiKe.com/</a> <small>(这是个附赠 5 元代金卷的注册链接🙈)</small></h4>
+
+
+
+<p><img src="images/a15b4afegw1eoqbyaft4kg203d03amxx.jpg"></p>
+<ul class="nav">
+	<li><a href="http://itorr.sojo.im:1024/" class="code">项目列表</a></li>
+	<li><a href="//mouto.org/" class="me">博客</a></li>
+	<li><a href="//weibo.com/reiove" class="weibo">@卜卜口</a></li>
+	<li><a href="//vscam.co"><img src="images/a15b4afegw1eoqb7freulj201l01gjr5.jpg">VScam</a></li>
+	<li><a href="http://itorr.sojo.im:1024/fm/" title="通常意义的电台"><img src="images/a15b4afegw1eoqb7c8a4pg202x01ewee.jpg">偷揉电台</a></li>
+	<li><s>	<a href="http://music.syouzyo.org" title="通常意义的播放器，很多专辑那种"><img src="http://itorr.sojo.im:1024/twitter/i/a65/k702.svg"><h4 style="margin:0;">播放器<sub><big>专</big><i>辑</i>那种</sub><sup>自己用</sup></h4></s></li>
+</ul>
+
+	<div id="hitokoto"></div>
+<div class="box-san">
+	<p>“我出saber都出了四十多套了，你敢说我出的不好？”听起来就跟“我都六十多岁了你敢说我不对？”一样啊。。。。不懂别人一提意见动辄就讲自己多辛苦的。。。</p>
+</div>
+
+
+<style>
+#友情链接{
+	padding:1em 0;
+	margin:2em;
+	border:5px solid yellow;
+	box-shadow:-12px -12px 0 4px blue;
+}
+#友情链接 h3{
+	text-shadow:4px 4px 0 green;
+}
+.r{float:right;}
+</style>
+<img src="images/005V6z2pgw1f0zuh3pj7wg305i01a74w.jpg" alt="">
+<div id="友情链接" class="links r">
+	<h3>🐕友情链接！😂😢😷😇</h3>
+	<ol>
+		<li>
+			😇
+			<a href="http://www.qiyichao.cn" target="新窗口">亓一超</a>
+			<a href="http://www.v2ex.com/member/ss098" target="新窗口">v2ex</a>
+		</li>
+		<li>
+			👤
+			<a href="http://itrafi.sinaapp.com" target="新窗口">itrafi</a>
+			<a href="http://www.v2ex.com/member/itrafi" target="新窗口">v2ex</a>
+		</li>
+		<li>
+			👺
+			<a href="http://www.tcdw.net/" target="新窗口">吐槽大王</a>
+		</li>
+		<li>
+			🙊
+			<a href="http://futa.in/" target="新窗口">“扶她进来”~！</a>
+		</li>
+		<li>
+			<a href="http://www.nihaomoe.com" target="新窗口">偶更萌蛤！</a>
+		</li>
+		<li>
+			<a href="mailto:itorrrrrr@me.com?subject=申请友情链接">📮申请友情链接！</a>
+		</li>
+	</ol>
+</div>
+
+
+<div id="shizhong" style="position:absolute;top:0;right:100px;"></div>
+<script>
+setInterval(function(){
+	shizhong.innerHTML=new Date();
+},1000);</script>
+<i><u>QQ:S9Z66<b style="font-size:2em;">∞</b>o24</u></i>
+
+<div style="float:right;">
+<h3>「约束」现场 偶像大师 九周年纪念演唱会</h3>
+<!-- <embed height="421" width="600" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf?aid=2371082&amp;page=1" flashvars="aid=2371082&amp;page=1&amp;autoplay=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"> -->
+<!-- <div style="overflow: hidden;width: 670px;height: 420px;position:relative;">
+<iframe 
+	src="https://www.bilibili.com/video/av2371082?from=search&seid=17799856909177621960" 
+	scrolling=no 
+	border=0 frameborder="no" framespacing="0" 
+	allowfullscreen=true
+	style="position: absolute;width:1200px;height:500px;margin:-55px 0 0 -100px"
+	> </iframe>
+</div> -->
+<!-- 
+<iframe 
+	src="https://www.bilibili.com/blackboard/html5player.html?aid=2371082&cid=3707489&enable_ssl=1&crossDomain=1&as_wide=1" 
+	scrolling=no 
+	border=0 frameborder="no" framespacing="0" 
+	allowfullscreen=true
+	style=width:600px;height:421px
+	> </iframe> -->
+
+<iframe src="//player.bilibili.com/player.html?aid=2371082&cid=3707489&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 665px; height: 441px;"> </iframe>
+
+</div>
+
+
+
+<div>
+<style>
+#xximg{}
+.moe123-link{
+
+}
+.moe123-link img{
+	width:580px;
+
+	-webkit-animation:1s ease infinite;
+	   -moz-animation:1s ease infinite;
+	   	-ms-animation:1s ease infinite;
+	   		animation:1s ease infinite;
+
+	-webkit-animation-name:shake2;
+	   -moz-animation-name:shake2;
+		-ms-animation-name:shake2;
+			animation-name:shake2;
+}
+
+/* 震颤 */
+@-webkit-keyframes shake2{
+    10%,30%,50%,70%,90%{opacity:0;}
+}
+@-moz-keyframes shake2{
+    10%,30%,50%,70%,90%{opacity:0;}
+}
+@-ms-keyframes shake2{
+    10%,30%,50%,70%,90%{opacity:0;}
+}
+@keyframes shake2{
+    10%,30%,50%,70%,90%{opacity:0;}
+}
+</style>
+<img id="xximg">
+<a class="moe123-link" href="http://moe123.com/?bakazhangyu" title="萌导航" target="新窗口">
+	<img src="images/a15b4afegw1eznaeefpx5j20qe0460v0.jpg" alt="萌导航">
+</a>
+<script>
+var a='Chrome 3l obb muji2 iphone5c beijing 24l nike vscam vkk k702 diaopai bull six uec 360 chenguang';
+a=a.split(' ');
+(xximg.onclick=function(){
+	xximg.src='http://sojo.im/za2/i/img/'+a[Math.floor(Math.random()*a.length)]+'.svg';
+})()
+setInterval(xximg.onclick,7e3);
+
+</script>
+
+</div>
+<!-- 多说评论框 start -->
+<!-- 	<div class="ds-thread" data-thread-key="2" data-title="美少女百科恶搞页面" data-url="/test.html"></div> -->
+	<div class="ds-thread" data-thread-key="2" data-title="美少女百科恶搞页面" data-url="http://sojo.im/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"nulll"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+<style>
+.ds-post-self{background-image:url(back1.gif);  display: inline-block;overflow:hidden;zoom:1;}
+.ds-post{padding: 1em 0;}
+.ds-children{padding-left:40px;}
+.ds-user-name{font:bold 2em 楷体;}
+.ds-textarea-wrapper textarea{width:80%;height:5em;font-size:1.5em;}
+.ds-time{color:green;}
+.ds-avatar img{float:left;}
+a[href="http://i.mouto.org/"],
+img[alt^="卜"],
+a[title="卜"]{display:none;}
+.ds-post-button{
+	font-size:2em;
+	background:blue;
+	color:#FFF;
+	border-radius:.5em;
+}
+</style>
+<marquee behavior=alternate>
+	<img src="images/a15b4afegw1eowmvyl266j20og082q7s.jpg">
+	<img src="images/a15b4afegw1eowmvyvh83j20og082n2j.jpg">
+	<img src="images/a15b4afegw1eowmvzw607j20og082n2q.jpg">
+</marquee>
+	<a href="http://www.idolmaster-anime.jp" title="偶像大师剧场版 公式">
+		
+		<img src="images/a15b4afegw1eowmp43cy3g20go037t95.jpg">
+	</a>
+
+<div class="post">
+	<h4><img src="images/a15b4afegw1eoqby8a1ajg200p00j0m3.jpg">下面是写生的猪！！(óꀦò♥d)~~~~~~~~~~(b♥óꀦò)</h4>
+	<img src="images/4764ae2atw1eh8hevihh4j21kw16ob29.jpg">
+	<time>2015-01-29 13:123:00</time>
+</div>
+<script src="img/itorr.m.js"></script>
+<script>
+
+var nnw=function(d,c){var a=function(){var e=$.D.m("span"),j=["0","-68px"],f=0,i=-100,h=j.length,g,k=function(){if(f==h){f=0;i+=12;}if((i-200)>$("body").clientWidth){clearTimeout(g);$.D.d(e);return;}$.css(e,"background-position:"+j[f]+" 0;left:"+i+"px;");f++;g=setTimeout(k,120);};e.className="nnw";$.D.a(e);k();e.onmouseover=function(){clearTimeout(g);};e.onmouseout=function(){g=setTimeout(k,120);};},b=function(){var g=function(n,l,m){if(n.attachEvent){n["e"+l+m]=m;n[l+m]=function(){n["e"+l+m](window.event);};n.attachEvent("on"+l,n[l+m]);}else{n.addEventListener(l,m,false);}},k={},j=0,f=["38","38","40","40","37","39","37","39","66","65"],e=f.length,i=function(m){if(!h.bind){return;}var l=m.keyCode;switch(m.type){case"keydown":if(k[l]>0){return;}k[l]=1;if(l==f[j]){j++;if(j==e){a();j=0;}}else{if(l==f[0]){j=1;}else{j=0;}}break;case"keyup":k[l]=0;break;}},h={init:function(){g(window,"keydown",i);g(window,"keyup",i);},state:k,bind:true};return h;}();b.init();setInterval(a,2000);$.lcss("img/nnw.m.css");return a;}(window,document);
+
+var htkt=function(){
+	$.j('http://api.hitokoto.us/rand?encode=jsc&fun={cb}',function(d){
+		hitokoto.innerHTML=d.hitokoto+'++++'+d.author+'hitokoto';
+		setTimeout(htkt,5e3);
+	});
+};
+htkt();
+
+
+
+console.log('@卜卜口 2015/1/29');
+
+var dds=function(){
+	setTimeout(function(A){
+		A=$('link[type="text/css"]');
+		if(A)
+			$.D.d(A);
+		else
+			dds();
+	},1000)
+};
+dds();
+
+var dds2=function(){
+	var 
+	o=$.S('img'),
+	i=o.length;
+	while(i--)if(!o[i].onerror)o[i].onerror=function(){
+		this.src='err.gif'
+	}
+	setTimeout(dds2,100)
+};
+dds2();
+
+</script>
+<center><img src="images/a15b4afegw1eowovith46j208c08c3zs.jpg"></center>
+
+<img style="position:absolute;position:fixed;bottom:0;right:100px;" src="images/a15b4afegw1es1ln3oxzvg202803k75f.jpg">
+<script>
+
+var startFloat=function(picPath){
+	var img;      //浮动DIV
+	var l2r = 1;     //左右移动方向
+	var t2b = 1;     //上下移动方向
+	  
+	/*
+	 * 注意: element.style.xxx ，必须先设置才能读取。例如元素都有宽度，但是style.width不设置是没有的
+	*/  
+	//移动函数
+	var movePic=function(pic) {  
+		var xpos = pic.offsetLeft;  
+		var ypos =pic.offsetTop;  
+		var picWidth =200;   //浮动DIV大小
+		var picHeight =200;  
+		var bodyWidth = document.body.clientWidth;  //主窗口大小，有没有更好的获取方式？
+		var bodyHeight = document.body.clientHeight;  
+	  
+		var step = 3;  
+		if(l2r==1) { //当前是左->右
+			xpos += step;  
+			if(xpos+picWidth>=bodyWidth) {  
+				l2r = 0;  
+				xpos -= step;  
+			}  
+		}else{  
+			xpos -= step;  
+			if(xpos<=0) {  
+				l2r = 1;  
+				xpos += step;  
+			}  
+		}  
+		if(t2b==1) { //当前是上->下
+			ypos += step;  
+			if(ypos+picHeight>=bodyHeight) {  
+				t2b = 0;  
+				ypos -= step;  
+			}  
+		}else{  
+			ypos -= step;  
+			if(ypos<=0) {  
+				t2b = 1;  
+				ypos += step;  
+			}  
+		}  
+	  
+		pic.style.left = xpos + "px";  
+		pic.style.top = ypos + "px";  
+		setTimeout(function(){
+			movePic(img);
+		},18); // 第一个参数为执行的语句，不是函数名
+	}  
+	//浮动启动函数, picFile-图片文件路径
+	img = document.createElement("img");  
+	img.setAttribute("style","z-index:99;background-color:red;position:absolute");  
+	img.src=picPath;
+	img.style.left = Math.floor(Math.random()*1000)+'px';
+	img.style.top=0
+	document.body.appendChild(img);  
+  
+	//开始浮动
+	movePic(img); 
+
+//兼容浏览器的加载完成事件处理, func--自动执行的函数的名字
+
+};
+startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
+startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
+startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
+startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
+startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
+setTimeout(function(){$.j('http://1.mouto.org/s')},3000);
+</script>
+
+
+<iframe class="iframe-comet"></iframe>
+
+<script>
+var message = [	'▁▂▃▄▅▆▇ `^^^^^~ ░ ui▀┳╲ ☺ sojo! ▓',
+				'▂▁▂▃▄▅▆` ^^^^^~ ░ ui▀┳╲ ☺ sojo! ▓',
+				'▃▂▁▂▃▄▅ `^^^^^~ ░ ui▀┳╲ ☻ sojo! ▓',
+				'▄▃▂▁▂▃▄` ^^^^^~ ░ ui▀┳╲ ☻ sojo! ▓',
+				'▅▄▃▂▁▂▃ `^^^^^~ ░ ui▀┳╲ ☺ sojo! ▓',
+				'▆▅▄▃▂▁▂` ^^^^^~ ░ ui▀┳╲ ☺ sojo! ▓',
+				'▇▆▅▄▃▂▁ `^^^^^~ ░ ui▀┳╲ ☻ sojo! ▓',
+				'▆▇▆▅▄▃▂` ^^^^^~ ░ ui▀┳╲ ☻ sojo! ▓',
+				'▅▆▇▆▅▄▃ `^^^^^~ ░ ui▀┳╲ ☺ sojo! ▓',
+				'▄▅▆▇▆▅▄` ^^^^^~ ░ ui▀┳╲ ☺ sojo! ▓', 
+				'▃▄▅▆▇▆▅ `^^^^^~ ░ ui▀┳╲ ☻ sojo! ▓', 
+				'▂▃▄▅▆▇▆` ^^^^^~ ░ ui▀┳╲ ☻ sojo! ▓']; 
+
+var i = 0; 
+
+function animateTitle() {
+	i >= message.length - 1 ? i = 0 : i++; 
+	document.title = message[i];
+	setTimeout(animateTitle, 200);	
+}
+
+animateTitle();
+// setTimeout(function(){
+// 	$('.iframe-comet').src='http://itorr.sojo.im:1024/comet/'
+// },2000)
+</script>
+
+
+<style>
+#cz{color:#FFF;font-size:.5em;}
+#cz li{}
+#cz li b{margin-right:1em;}
+#cz li cite{margin-right:1em;font-size:.8em;}
+#cz li i{font-size:.7em;opacity:.5;}
+</style>
+
+<ul id="cz"></ul>
+
+<script>
+var cnZ=function(r){
+	var h='';
+	var i=r.length;
+	while(i--){
+		o=r[i];
+		h='<li><b>'+(o.w||o.d||o.b)+'</b><i>'+o.agent+'</i></li>'+h;//<cite>'+o.ip+'</cite>
+	}
+	cz.innerHTML=h;
+};
+</script>
+
+
+
+<!-- <iframe src="http://www.baidu.com/s?wd=%E4%BA%8C%E6%AC%A1%E5%85%83" width="300" height="200"> -->
+
+
+
+<style>
+.msdr-link{
+	position:absolute;
+	top:880px;
+	left:1080px;
+	-webkit-animation:.4s ease infinite;-moz-animation:.4s ease infinite;-ms-animation:.4s ease infinite;animation:.4s ease infinite;
+	-webkit-animation-name:shake;-moz-animation-name:shake;-ms-animation-name:shake;animation-name:shake;
+}
+.msdr-link img{
+	width:400px;
+}
+/* 震颤 */
+@-webkit-keyframes shake{
+    0%,100%{-webkit-transform:translateX(0);}
+    10%,30%,50%,70%,90%{-webkit-transform:translateX(-10px) translateY(-5px) rotate(-5deg);}
+    20%,40%,60%,80%{-webkit-transform:translateX(10px) rotate(5deg);}
+}
+@-moz-keyframes shake{
+    0%,100%{-moz-transform:translateX(0);}
+    10%,30%,50%,70%,90%{-moz-transform:translateX(-10px) translateY(-5px) rotate(-5deg);}
+    20%,40%,60%,80%{-moz-transform:translateX(10px) rotate(5deg);}
+}
+@-ms-keyframes shake{
+    0%,100%{-ms-transform:translateX(0);}
+    10%,30%,50%,70%,90%{-ms-transform:translateX(-10px) translateY(-5px) rotate(-5deg);}
+    20%,40%,60%,80%{-ms-transform:translateX(10px) rotate(5deg);}
+}
+@keyframes shake{
+    0%,100%{transform:translateX(0);}
+    10%,30%,50%,70%,90%{transform:translateX(-10px) translateY(-5px) rotate(-5deg);}
+    20%,40%,60%,80%{transform:translateX(10px) rotate(5deg);}
+}
+</style>
+
+<!-- <a class="msdr-link" href="http://masadora.net/?referer=sojo.im" target="_blank">
+	<img src="images/a15b4afegw1ez1dbfq8cej20fk078gna.jpg">
+</a> -->
+
+<script>
+$('body').onclick=function(e){
+	var o=e.target;
+	while(o.tagName!='A'&&o.tagName!='BODY'){
+		o=o.parentNode;
+	}
+	if(o.tagName=='A')
+		cNz('A:'+o.getAttribute('href'));
+
+};
+</script>
+
+
+<h4>你如果有什么问题想问，那我就要和你说了「xxx，不会百度么？」</h4>
+<a href="http://cnm.buhuibaidu.me">
+	<p>htpps:///CNM。BuhUuiBaidu。mE</p>
+	<img src="http://wx1.sinaimg.cn/large/4764ae2agy1fhjhmrwth1g210y0pcglt.gif" style="width: 400px;" referrerpolicy="no-referrer">
+</a>
+
+
+<a href="http://kiopkio.lofter.com/post/171785_ee7935ec">【素材】imas系列事务所/企划logo矢量重制集合</a>
