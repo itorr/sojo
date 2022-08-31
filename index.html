@@ -21,6 +21,9 @@ marquee a{color:chartreuse;}
 
 #hitokoto{position:absolute;position:fixed;right:0;bottom:0;padding:.3em 1em;border:3px solid #00f6ff;background:#FF0;color:#20F;}
 
+a[href^="#"]{
+    cursor:not-allowed;
+}
 
 .post{margin:2em;}
 .post h4{font-size:2em;color:#FD0;}
@@ -58,7 +61,6 @@ marquee a{color:chartreuse;}
 <h3>Hacked by RR</h3>
 
 <base target="_blank">
-
 
 <style>
 .播放器{
@@ -1344,7 +1346,10 @@ var 真播放啊都 = ()=>{
 
 fetch('https://lab.magiconch.com/api/hosts/unicom-host').then(r=>r.json()).then(r=>{
     baseURL = r;
-    真播放啊都();
+    // 真播放啊都();
+    document.body.addEventListener('click',真播放啊都,{
+        once: true
+    });
 });
 
 
@@ -1496,7 +1501,7 @@ ul.ds-comments{
 </form>
 
 <img src="images/a15b4afegw1eowobfq39yg201j00r3ys.jpg">
-<video id="u2b" controls="true" x-webkit-airplay="allow" data-youtube-id="CXDFNYJp5Io" title="秘蔵映像！春香と段ボール箱" style="width:320px; height:180px;" src="img/videoplayback.mp4" autoplay></video>
+<video id="u2b" controls="true" x-webkit-airplay="allow" data-youtube-id="CXDFNYJp5Io" title="秘蔵映像！春香と段ボール箱" style="width:320px; height:180px;" src="img/videoplayback.mp4" autoplay playsinline></video>
 <label class="u2bloop"><input id="u2bloop" type="checkbox" value="1" />鬼畜循环开启！</label>
 
 <script>
@@ -1836,6 +1841,7 @@ var startFloat=function(picPath){
 	img.src=picPath;
 	img.style.left = Math.floor(Math.random()*1000)+'px';
 	img.style.top=0
+	img.style.maxWidth='100px'
 	document.body.appendChild(img);  
   
 	//开始浮动
@@ -1844,11 +1850,19 @@ var startFloat=function(picPath){
 //兼容浏览器的加载完成事件处理, func--自动执行的函数的名字
 
 };
-startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
-startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
-startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
-startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
-startFloat('images/a15b4afegw1es1lmehl4qg201j01et8k.jpg');
+imageList = [
+    'images/a15b4afegw1es1ln7faeeg202801vjt2.jpg',
+    'images/a15b4afegw1es1lmehl4qg201j01et8k.jpg',
+    'images/a15b4afegw1eoqai9p6utg201e01eq3d.jpg',
+    'images/a15b4afegw1eoqb7s9uegg2064064q9l.jpg',
+    'images/a15b4afegw1eoqb7c8a4pg202x01ewee.jpg',
+    'images/a15b4afegw1eoqbyaft4kg203d03amxx.jpg',
+]
+for(let i=0;i<8;i++){
+    setTimeout(_=>{
+        startFloat(imageList[Math.floor(Math.random()*imageList.length)]);
+    },i* Math.random()*2000)
+}
 </script>
 
 
