@@ -1,0 +1,25 @@
+{
+  "name": "sojo",
+  "version": "1.0.0",
+  "description": "sojo.im",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itorr/sojo.git"
+  },
+  "keywords": [
+    "front-end"
+  ],
+  "files": [
+    "index.html"
+  ],
+  "author": "itorr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itorr/sojo/issues"
+  },
+  "homepage": "https://github.com/itorr/sojo#readme"
+}
