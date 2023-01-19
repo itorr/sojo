@@ -1344,7 +1344,7 @@ var 真播放啊都 = ()=>{
 	// 音乐封面图.src = 'http://y.sojo.im:666/xiami/'+歌曲信息.aid+'.jpg!w520h520';
     音乐封面图.src = `https://${baseURL}:60385/xiami/${aid}.jpg!w520h520`;
 
-    播放器.addEventListener('timeupdate', (event) => {
+    播放器.ontimeupdate = (event) => {
         const { currentTime } = event.currentTarget;
 
         播放器.volume = 0.114514 * Math.sin(currentTime) + (1-0.1919810);
@@ -1354,7 +1354,7 @@ var 真播放啊都 = ()=>{
                 translateY(${Math.cos(currentTime) * 15}vh)
                 translateX(-${(75 - (currentTime * 3) % 75)}vw)
         `;
-    });
+    };
 };
 
 fetch('https://lab.magiconch.com/api/hosts/unicom-host').then(r=>r.json()).then(r=>{
